@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- Under the getting started button on right - then click on starter template -->
+	<head>
+		<!-- Required meta tags -->
+		<title>Academy Cinemas</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+		<link rel="stylesheet" href="./css/cinema_style.css">
+		</head>
+	<body id="home">
+			<!-- Page content -->
+			<div class="container"> <!-- If you were to copy and paste the .container-fluid after the class="container (add a space), you would be denoting that it's the container aaand yoy are denoting that the container wil be the full width -->
+		
+			<!-- navigation (Under the Components button - then push navbar and copy and paste example) -->
+			<nav class="navbar navbar-toggleable-md fixed-top navbar-light" style="background-color: #e3f2fd;"> <!-- navbar-light is the font color and the bg-faded is the color of the background - we changed this color scheme to target this unique background found on Bootstrap, so we put it outside the quotations with a space first (style is red because it's its own section and not part of the class section --> <!-- We inserted fixed-top to make it static and not move when you scroll down. In Bootstrap, this is under component, navbar, then go to the feature for the item to stay static, so the stays static home, about, showtimes, deals part stays static and doesn't move as we scroll down -->
+				<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+					<a class="navbar-brand" href="#">
+						<img src="./images/movie_logo.gif" width="60" height="58" alt="">
+					</a>
+
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item active">
+							<a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a> <!-- If it were to say <a class="nav-link disabled" the button would have a disabled symbol over it when you hover over it and you wouldn't be able to click it -->
+						</li>
+						<li class="nav-item"> 
+							<a class="nav-link" href="#">About</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#showtimes">Showtimes</a> <!-- nav-link denotes that there will be a navigation bar -->
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#deals">Deals</a> <!-- our navigation points at the tags -->
+						</li>
+					</ul>
+					<form class="form-inline my-2 my-lg-0 hidden-sm-down"> <!-- We are actually putting code here to tell the browser what we DON'T want to happen. sr-only means you only want it to affect the screen readers only and exclude for certain views. You can also exclude sizes and affect sizes and say which ones you don't want. Under our form section, that has our search and the button, and we don't want that to show. So at the end of that class name, we'll add a new class name that says hidden, so we are saying hide it when the breakpoint hits small or less. If we were to type up instead of down, it would be from that size up -->
+						<input class="form-control mr-sm-2" type="text" placeholder="Search">
+						<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+					</form>
+				</div>
+			</nav>
+			<!-- /navigation -->
+	
+			<!-- Jumbotron (found in Jumbotron section in Bootstrap) -->
+			<div class="jumbotron jumbotron-fluid text-center bg-info mt-4 hidden-md-down"> <!-- We are going to exclude this from the medium and down --> <!-- mt-4 means to add space at the top. we put bg-info (found in an example under utilities, then colors) because on bootstrap's site, it says if you put, for example, text-info, it will make the text a pretty light blue color and it works like this with "whatever you choose hyphen info", so we'll use it for the background --> <!-- If you would like to denote that you want the text centered, you write "text-center" after "jumbotron-fluid" and a space. So there are 3 class names (aka 3 behaviors) here -->
+				<div class="container"> 
+					<h1 class="display-2">Academy Cinemas</h1> <!-- bootstrap uses different displays to denote different sizes - it shows on bootstrap's website that when we type in display-2 (vs display-3), the font will be a little bigger-->
+					<p class="lead">Sit back, relax, and enjoy the show...</p>
+				</div>
+			</div>
+			<!-- /Jumbotron -->
+		
+			<!-- main content --> 
+			<div class="container my-5"> <!-- found under equal-width example in grid in the layout section Up to 12 columns and unlimited rows. ".col-md-" denotes that you want it used for a medium-sized device. Each "div class=row" / "div class=column" denotes that the column is one of 3. We started with mt-5 and changed to my-5 to make it margin vertical that way it is top and bottom -->
+				<div class="row">
+					<div class="col-md-4 pt-5"> <!-- We moved this content down so you can see it on the screen even when you make it smaller by adding pt-4. p=padding t=top --><!-- md-4 means starting at the medium screen and give it a width of 4 (but it will size itself accordingly -->
+						<h3>About Academy Cinemas</h3> <!-- when we changed h2 to h3, the text was positioned in a different way -->
+						<img class="img-fluid" src="./images/pdx.jpg" alt=""><!-- Go to content, then images, then responsive images (to respond to the user's screen), then copy class="img-fluid" in front of the src (with a space as well of course) to make the image fluid and sized accordingly to the width of this specific column -->
+						<p>Located in the beautiful city of Portland, Oregon's Pearl district!</p>
+						<p>Our reels have been spinning since 1959. Showing our guests a great time is our passion and seeing their smiles is our pleasure!</p>
+					</div>
+					<div class="col-md-4 pt-5">
+						<h3>Accomodations</h3>
+						<p>All of our auditoriums are equipped with brand new Christie 3D&reg; sound systems!</p>
+						<p>Relax in our, extra-wide, plush cushioning recliners. Seating is on first-come-first-served basis. Our seating arrangement is disability friendly &#9855;.</p>
+						<p>Our auditoriums are climate controlled to approximately 72&deg; year-round.</p>
+					</div>
+					<div class="col-md-4 pt-5">
+						<h3>Showtimes</h3> <!-- components, then list group, then copy and paste first example. The ul list below we used is just like a list, but adding list-group-item gives it a certain look -->
+							<ul class="list-group">
+								<li class="list-group-item">
+									<a class="nav-link" href="#showtimes">Kong: Skull Island</a>
+								</li>
+								<li class="list-group-item"> 
+									<a class="nav-link" href="#showtimes">Ghosts in the Shell</a> <!-- #showtimes means when someone clicks on the showtime, it is going to take them to something that has an ID of showtimes, so under the card-group, we needed to give an ID of showtimes (and we did!) -->
+								</li>
+								<li class="list-group-item">
+									<a class="nav-link" href="#showtimes">Beauty and the Beast</a>
+								</li>
+								<li class="list-group-item">
+									<a class="nav-link" href="#showtimes">Life (2017)</a>
+								</li>
+								<li class="list-group-item">
+									<a class="nav-link" href="#showtimes">Logan (2017)</a>
+								</li>
+								<li class="list-group-item">
+									<a class="nav-link" href="#showtimes">Power Rangers</a>
+								</li>
+							</ul>
+					</div>
+				</div>
+			</div>
+			<!-- /main content -->
+		
+			<!-- showtimes --> 
+			<div class="card-group" id="showtimes"> <!-- (in content, then card) --> <!-- we added ID="showtimes" to give an ID of showtimes, so now, when someone clicks on the showtimes, it will bring them back to this section -->
+				<div class="card">
+					<img class="card-img-top" src="./images/kongskullisland.jpg" alt="Card image cap">
+					<div class="card-block">
+						<h4 class="card-title">Kong: Skull Island</h4> <!-- card title -->
+						<span class="badge badge-pill badge-info">12:00pm</span> <!-- components, then push badge -->
+						<span class="badge badge-pill badge-info">1:30pm</span>
+						<span class="badge badge-pill badge-info">3:00pm</span>
+						<span class="badge badge-pill badge-info">5:30pm</span>
+						<span class="badge badge-pill badge-info">7:00pm</span>
+						<span class="badge badge-pill badge-info">9:30pm</span>
+					 </div>
+					<div class="card-footer">
+						<small class="text-muted">Last updated 3 mins ago</small>
+					</div>
+				</div>
+				<div class="card">
+					<img class="card-img-top" src="./images/ghostintheshell.jpg" alt="Card image cap">
+					<div class="card-block">
+						<h4 class="card-title">Ghost in the Shell</h4> <!-- card title -->
+						<span class="badge badge-pill badge-info">12:00pm</span> <!-- components, then push badge -->
+						<span class="badge badge-pill badge-info">1:30pm</span>
+						<span class="badge badge-pill badge-info">3:00pm</span>
+						<span class="badge badge-pill badge-info">5:30pm</span>
+						<span class="badge badge-pill badge-info">7:00pm</span>
+						<span class="badge badge-pill badge-info">9:30pm</span>
+					</div>
+					<div class="card-footer">
+						<small class="text-muted">Last updated 3 mins ago</small>
+					</div>
+				</div>
+				<div class="card">
+					<img class="card-img-top" src="./images/beautyandthebeast.jpg" alt="Card image cap">
+					<div class="card-block">
+						<h4 class="card-title">Beauty and the Beast</h4> <!-- card title -->
+						<span class="badge badge-pill badge-info">12:00pm</span> <!-- components, then push badge -->
+						<span class="badge badge-pill badge-info">1:30pm</span>
+						<span class="badge badge-pill badge-info">3:00pm</span>
+						<span class="badge badge-pill badge-info">5:30pm</span>
+						<span class="badge badge-pill badge-info">7:00pm</span>
+						<span class="badge badge-pill badge-info">9:30pm</span>
+					</div>
+					<div class="card-footer">
+						<small class="text-muted">Last updated 3 mins ago</small>
+					</div>
+				</div>
+				<div class="card">
+					<img class="card-img-top" src="./images/life.jpg" alt="Card image cap">
+					<div class="card-block">
+						<h4 class="card-title">Life (2016)</h4> <!-- card title -->
+						<span class="badge badge-pill badge-info">12:00pm</span> <!-- components, then push badge -->
+						<span class="badge badge-pill badge-info">1:30pm</span>
+						<span class="badge badge-pill badge-info">3:00pm</span>
+						<span class="badge badge-pill badge-info">5:30pm</span>
+						<span class="badge badge-pill badge-info">7:00pm</span>
+						<span class="badge badge-pill badge-info">9:30pm</span>
+					</div>
+					<div class="card-footer">
+						<small class="text-muted">Last updated 3 mins ago</small>
+					</div>
+				</div>
+				<div class="card">
+					<img class="card-img-top" src="./images/logan.jpg" alt="Card image cap">
+					<div class="card-block">
+						<h4 class="card-title">Logan (2016)</h4> <!-- card title -->
+						<span class="badge badge-pill badge-info">12:00pm</span> <!-- components, then push badge -->
+						<span class="badge badge-pill badge-info">1:30pm</span>
+						<span class="badge badge-pill badge-info">3:00pm</span>
+						<span class="badge badge-pill badge-info">5:30pm</span>
+						<span class="badge badge-pill badge-info">7:00pm</span>
+						<span class="badge badge-pill badge-info">9:30pm</span>
+					</div>
+					<div class="card-footer">
+						<small class="text-muted">Last updated 3 mins ago</small>
+					</div>
+				</div>
+				<div class="card">
+					<img class="card-img-top" src="./images/powerrangers.jpg" alt="Card image cap">
+					<div class="card-block">
+						<h4 class="card-title">Power Rangers</h4> <!-- card title -->
+						<span class="badge badge-pill badge-info">12:00pm</span> <!-- components, then push badge -->
+						<span class="badge badge-pill badge-info">1:30pm</span>
+						<span class="badge badge-pill badge-info">3:00pm</span>
+						<span class="badge badge-pill badge-info">5:30pm</span>
+						<span class="badge badge-pill badge-info">7:00pm</span>
+						<span class="badge badge-pill badge-info">9:30pm</span>
+					</div>
+					<div class="card-footer">
+						<small class="text-muted">Last updated 3 mins ago</small>
+					</div>
+				</div>
+			</div>
+			<!-- /showtimes -->
+		
+			<!-- sign up -->
+			<div class="container py-4 text-center col-md-6"> <!-- we centered the text this way by adding text-center and col-md-6 means the column will be a medium 6 column width <!-- To give the email thing some spacing: p is for padding, y stands for up and down, so we want a space on the top and bottom of it -->
+				<form> <!-- go to components, then forms -->
+					<div class="form-group row">
+						<h1 class="display-5 my-5 text-primary">Stay current on the movies!</h1> <!-- and lastly, we added display-5 before text-primary to make the font size bigger. We added my-5 to make margins spaced the way we like --> <!-- We changed the color of the font from white to the darker blue we want called primary in bootstrap and added it by giving it a class --> <!-- we removed what would have been the Email label element that would have been nested below -->
+						<div class="col-sm-12">
+							<input type="email" class="form-control form-control-lg" id="lgFormGroupInput" placeholder="you@example.com">
+							<button type="button" class="btn btn-outline-primary mt-4 mr-auto">Sign up!</button> <!-- To make a button, go to components, then buttons --> <!-- We nested the button element here to make sure it is inline with the email --> <!-- we added mt-4 to say to give space at the top -->
+						</div>
+					</div>
+				</form>
+			
+			</div>
+			<!-- /sign up -->
+		
+			<!-- footer -->
+			<ul class="nav" id="deals"> <!-- under components, navs --> 
+				<li class="nav-item">
+					<small><a class="nav-link active" href="#">Movie Rewards</a></small> <!-- If you put small in front of it and then close it with a small tag, that just makes anything inside that compressed , so smaller, and that is an HTML5 syntax -->
+				</li>
+				<li class="nav-item">
+					<small><a class="nav-link" href="#">Movies@news.org</a></small>
+				</li>
+				<li class="nav-item">
+					<small><a class="nav-link" href="#">Info@academycinemas.com</a></small>
+				</li>
+				<li class="nav-item">
+					<small class="nav-link">&copy;2017 Academy Cinemas&reg;</a></small> <!-- &copy;2017 is the copyright symbol code for 2017 / &reg; is the registered trademark. --> 
+				</li>
+			</ul>
+			<!-- /footer -->
+		
+			</div>
+			<!-- /Page content -->
+		<!-- jQuery first, then Tether, then Bootstrap JS. -->
+		<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+	</body>
+</html>
